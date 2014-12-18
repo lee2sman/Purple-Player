@@ -13,19 +13,20 @@ Purple Player
 	                              | $$
 	                               \$$    PLAYER CLI
 
-Ultra simple command line program to play a track screwed/pitched down in the terminal on OS X.
-It also throws a slowed-down "Ohhhhhhh Geee Linux Purped Down" plus some rambling spoken intro at the beginning to make it legit, in the style of OG Ron C and DJ Screw (RIP). You need fortune installed for the random text spoken, which comes on many systems or can be installed via brew.
+Ultra simple command line program to play a track screwed/pitched down in the terminal on OS X. It also throws a slowed-down "Ohhhhhhh Geee Linux Purped Down" plus some rambling spoken intro at the beginning to make it legit, in the style of OG Ron C and DJ Screw (RIP). You need fortune installed for the random text spoken, which comes on many systems or can be installed via brew.
 
 Please fork and edit this program and suggest improvements/changes!
 
 
-To use this:
-1.  download or copy purple.sh
-2.  `chmod +x purple.sh`
-3.  Type in `./purple.sh **trackname**` or type in `purple -h` or `purple --help` for info on how to use it.
+To use this in the terminal:
 
-Edit your .bash_profile and add an alias `alias purple='path/to/purple.sh` so that you only need to type `purple **trackname**` to run.
+```
+git clone https://github.com/lee2sman/Purple-Player.git
+cd Purple-Player
+sudo cp purple.sh /usr/bin/purple
+```
 
+Now just run `purple *trackname*` or `purple --help` for info on how to use it. Purple Player will check that say, Afplay and fortune are installed when run.
 
 Ideas to extend
 ===============
