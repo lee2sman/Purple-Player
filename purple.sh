@@ -1,41 +1,40 @@
 #!/bin/bash
 ### Purple Player CLI
 
-purple='\033[0;35m' # Define purple color for text
+purple='\033[0;95m' # Define purple color for text
 NC='\033[0m' # No Color
 
 echo -e $purple
-echo ' _______                                 __           
-|       \                               |  \          
-| $$$$$$$\ __    __   ______    ______  | $$  ______  
-| $$__/ $$|  \  |  \ /      \  /      \ | $$ /      \ 
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]   # check for help selection
+then
+    echo "Purple Player"
+    echo
+    echo "Chops and screws your music"
+    echo "Usage:"
+    echo "purple.sh filename"
+    echo -e "$NC"
+    exit 0
+fi
+
+echo ' _______                                 __
+|       \                               |  \
+| $$$$$$$\ __    __   ______    ______  | $$  ______
+| $$__/ $$|  \  |  \ /      \  /      \ | $$ /      \
 | $$    $$| $$  | $$|  $$$$$$\|  $$$$$$\| $$|  $$$$$$\
 | $$$$$$$ | $$  | $$| $$   \$$| $$  | $$| $$| $$    $$
 | $$      | $$__/ $$| $$      | $$__/ $$| $$| $$$$$$$$
-| $$       \$$    $$| $$      | $$    $$| $$ \$$     
+| $$       \$$    $$| $$      | $$    $$| $$ \$$
  \$$        \$$$$$$  \$$      | $$$$$$$  \$$  \$$$$$$$
-                              | $$                    
-                              | $$                    
-                               \$$                    
- _______   __                                         
-|       \ |  \                                        
-| $$$$$$$\| $$  ______   __    __   ______    ______  
-| $$__/ $$| $$ |      \ |  \  |  \ /      \  /      \ 
-| $$    $$| $$  \$$$$$$\| $$  | $$|  $$$$$$\|  $$$$$$\
-| $$$$$$$ | $$ /      $$| $$  | $$| $$    $$| $$   \$$
-| $$      | $$|  $$$$$$$| $$__/ $$| $$$$$$$$| $$      
-| $$      | $$ \$$    $$ \$$    $$ \$$     \| $$      
- \$$       \$$  \$$$$$$$ _\$$$$$$$  \$$$$$$$ \$$      
-                        |  \__| $$                    
-                         \$$    $$                    
-                          \$$$$$$          CLI        '
+                              | $$
+                              | $$
+                               \$$    PLAYER CLI'
 echo -e "$NC"
-echo $1
+
 if [ -f $1 ];
 then
-   say -v Alex -r 1.64 "OG Linux $track all purpped up" &
-   Afplay -r 0.64 "$track" &
+   say -v Alex -r 1.64 "OG Linux $1 all purpped up" &
+   Afplay -r 0.64 "$1"
 else
-   echo "File $FILE does not exist."
+   echo "File $1 does not exist."
 fi
-
