@@ -34,7 +34,7 @@ echo -e "$NC"
 
 if [ -f "$1" ];
 then
-   say -v Alex -r 1.85 "OG Linux `fortune` " &
+   say -v Alex -r 1.85 "OG Linux purped down `fortune` " &
    Afplay -r 0.64 "$1"
 else
    echo "File $1 does not exist."
