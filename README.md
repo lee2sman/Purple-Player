@@ -26,7 +26,7 @@ cd Purple-Player
 sudo cp purple.sh /usr/bin/purple
 ```
 
-Now just run `purple *trackname*` or `purple --help` for info on how to use it. Purple Player will check that say, Afplay and fortune are installed when run.
+Now just run `purple *trackname*` or `purple --help` for info on how to use it. Purple Player will check that *say, Afplay* and *fortune* are installed when run. Note that the program text is purple on the command line. It's been especially written with the rules for echoing color in OS X 10.8+
 
 Ideas to extend
 ===============
