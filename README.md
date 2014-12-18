@@ -30,6 +30,7 @@ Now just run `purple *trackname*` or `purple --help` for info on how to use it. 
 
 Ideas to extend
 ===============
-*  Use sox program instead so it can work on linux, PC, etc and also have tempo slowdown features
-*  Allow user to input text for voiceover. Maybe with use of an -i (input) flag.
-
+*  Use sox program instead so it can work on linux, PC, etc
+*  If sox used, implement tempo slowdown features via -t tempo flag to give tempo input
+*  Allow user to input voiceover text with -i input flag.
+*  Add -f fortune flag to have voiceover created via fortune program.
