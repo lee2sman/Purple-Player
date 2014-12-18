@@ -1,6 +1,10 @@
 #!/bin/bash
 ### Purple Player CLI
 
+which say > /dev/null || ( echo "say is not installed" && exit 1 )
+which fortune > /dev/null || ( echo "fortune is not installed" && exit 1 )
+which Afplay > /dev/null || ( echo "Afplay is not installed" && exit 1 )
+
 purple='\033[0;95m' # Define purple color for text
 NC='\033[0m' # No Color
 
@@ -34,7 +38,7 @@ echo -e "$NC"
 
 if [ -f "$1" ];
 then
-   say -v Alex -r 1.85 "OG Linux purped down `fortune` " &
+   say -v Alex -r 1.85 "OG Linux purped down `fortune` " & #delete the `fortune` section if you don't have it installed or don't want random text spoken at the beginning
    Afplay -r 0.64 "$1"
 else
    echo "File $1 does not exist."
