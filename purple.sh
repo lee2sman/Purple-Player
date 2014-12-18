@@ -9,8 +9,9 @@ echo -e $purple
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]   # check for help selection
 then
     echo "Purple Player"
+    say -v Alex -r 1.85 "Purple Player" &
+    echo "Chop and screw your music."
     echo
-    echo "Chops and screws your music"
     echo "Usage:"
     echo "purple.sh filename"
     echo -e "$NC"
@@ -31,9 +32,9 @@ echo ' _______                                 __
                                \$$    PLAYER CLI'
 echo -e "$NC"
 
-if [ -f $1 ];
+if [ -f "$1" ];
 then
-   say -v Alex -r 1.64 "OG Linux $1 all purpped up" &
+   say -v Alex -r 1.85 "OG Linux `fortune` " &
    Afplay -r 0.64 "$1"
 else
    echo "File $1 does not exist."
