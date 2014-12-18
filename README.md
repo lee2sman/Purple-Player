@@ -28,9 +28,11 @@ sudo cp purple.sh /usr/bin/purple
 
 Now just run `purple *trackname*` or `purple --help` for info on how to use it. Purple Player will check that *say, Afplay* and *fortune* are installed when run. The program runs without **fortune** installed but won't output a randomized vocal overlay at the beginning without it. Note that the program text is purple on the command line. It's been especially written with the rules for echoing color in OS X 10.8+
 
-Ideas to extend
-===============
-*  Use sox program instead so it can work on linux, PC, etc
-*  If sox used, implement tempo slowdown features via -t tempo flag to give tempo input
+To Do
+=====
+*  Use sox program instead of Afplay so it can run crossplatform on OS X, Linux, PC, etc
+*  Using sox, implement tempo slowdown 30% standard and add ability to control via -t tempo flag to give tempo input
 *  Allow user to input voiceover text with -i input flag.
 *  Add -f fortune flag to have voiceover created via fortune program.
+*  Add -n name flag to have program alter spoken name
+*  Add -b background flag to allow song to play in background
