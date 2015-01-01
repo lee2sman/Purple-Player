@@ -5,6 +5,7 @@ ramble=1
 which say > /dev/null || ( echo "say is not installed" && exit 1 )
 which fortune > /dev/null || ( echo "fortune is not installed" && ramble=0 )
 which Afplay > /dev/null || ( echo "Afplay is not installed" && exit 1 )
+which sox > /dev/null || ( echo "sox is not installed" && exit 1 )
 
 purple='\033[0;95m' # Define purple color for text
 NC='\033[0m' # No Color
@@ -42,10 +43,10 @@ then
     if [ $ramble -eq 0 ]; # if fortune not installed on system
     then
         say -v Alex -r 1.85 "OG Linux purped down" &
-        Afplay -r 0.64 "$1"
+        play "$1" speed 0.7
     else
         say -v Alex -r 1.85 "OG Linux purped down `fortune` " &
-        Afplay -r 0.64 "$1"
+        play "$1" speed 0.7
     fi
 else
    echo "File $1 does not exist."
